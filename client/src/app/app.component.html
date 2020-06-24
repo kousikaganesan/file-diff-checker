@@ -1,0 +1,53 @@
+<div class="file-container">
+  <div class="text-align-center">
+    <h1>
+      File diff checker
+    </h1>
+  </div>
+  <br>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-sm-4 padding-15">
+        <span class="title"> Upload File 1 : </span><br><br>
+        <input type="file" (change)="clearError()" class="form-control" #fileInputOne />
+      </div>
+      <div class="col-sm-4 padding-15">
+        <span class="title">  Upload File 2 :</span><br><br>
+        <input type="file" (change)="clearError()" class="form-control" #fileInputTwo />
+      </div>
+      <div class="col-sm-4 padding-15 compare-button">
+        <button type="button" (click)="compareFiles()" class="btn btn-primary">Compare</button>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div *ngIf="showError">
+    <div id="error" class="alert alert-danger error">
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      <strong> Error : </strong>&nbsp;Please upload two files of similar type
+    </div>
+  </div>
+  <br>
+  <div *ngIf="!showError && !fileContent && isShowSpinner" class="text-align-center">
+    <b> Loading...</b>
+  </div>
+  <div *ngIf="fileContent" class="padding-15">
+    <h4> Differences</h4><br><br>
+    <div class="row">
+      <div class="col-xs-6">
+        <span class="title"> File 1 : </span><br><br>
+        <div class="card">
+          <div [innerHTML]="fileContent.fileOne">
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <span class="title"> File 2 : </span><br><br>
+        <div class="card">
+          <div [innerHTML]="fileContent.fileTwo">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

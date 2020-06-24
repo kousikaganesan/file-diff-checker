@@ -1,0 +1,46 @@
+
+:host ::ng-deep mark { 
+  background-color: #ffea75 !important;
+}
+:host ::ng-deep pre { 
+  white-space: pre-wrap;       /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+.file-container{
+    margin: 20px;
+}
+.file-container .text-align-center{
+    text-align: center;
+}
+
+.file-container .form-group {
+    padding: 25px;
+}
+
+.file-container .padding-15{
+    padding: 15px !important;
+}
+
+.file-container .form-group .compare-button{
+    margin-top: 40px;
+}
+
+.file-container .form-group .title{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.file-container .card{
+    border-radius: 9px;
+    word-wrap: break-word;
+    border: 1px solid;
+    padding: 14px;
+}
+.file-container .error{
+    width: 37%;
+    margin: 0px 33px;
+}
